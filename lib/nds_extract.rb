@@ -1,6 +1,6 @@
 # Provided, don't edit
 require 'directors_database'
-require 'pry'
+
 
 # A method we're giving you. This "flattens"  Arrays of Arrays so: 
 # [[1,2], [3,4,5], [6]] => [1,2,3,4,5,6].
@@ -82,10 +82,10 @@ def gross_per_studio(collection)
   stud_name = collection[idx_stud][:studio]
     if result[stud_name]
     result[stud_name] += collection[idx_stud][:worldwide_gross]
-    binding.pry
+ 
     else 
     result[stud_name] = collection[idx_stud][:worldwide_gross]
-    binding.pry
+
     end
     idx_stud += 1
   end
@@ -110,7 +110,7 @@ def movies_with_directors_set(source)
   idx_dir += 1
   end
 return result
-pp result
+
   
   # INPUT:
   # * source: An Array of Hashes containing director information including
